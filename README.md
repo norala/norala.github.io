@@ -1,1 +1,0 @@
-# norala.github.io

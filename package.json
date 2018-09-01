@@ -10,9 +10,10 @@
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "prod": "npm run webpack -- --env.mode production",
     "debugthis": "node --inspect --inspect-brk ./src/index.js",
-    "build": "webpack-dev-server --mode development --open",
     "prod_build": "webpack --mode production",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d ./dist",
+    "publish-demo": "npm run build && npm run deploy"
   },
   "author": "",
   "license": "ISC",

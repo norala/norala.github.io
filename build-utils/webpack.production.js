@@ -1,8 +1,11 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 
 module.exports = env => ({
     output: {
-        filename: "bundle.js"
+        path: path.join(__dirname, "./dist"),
+        filename: "bundle.js",
+        publicPath: "/norala.github.io/"
     },
     module: {
         rules: [
@@ -17,7 +20,7 @@ module.exports = env => ({
 
         ]
     },
-    plugins: [new MiniCssExtractPlugin(),]
+    plugins: [new MiniCssExtractPlugin(),],
 });
 
 

@@ -53,8 +53,7 @@ module.exports = ({ mode, presets } = {
             new BaseHrefWebpackPlugin({ baseHref: '/' })
     
           ],
-             
-        },
+    },
         
         modeConfig(mode)
     );

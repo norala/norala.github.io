@@ -13,7 +13,7 @@
     "debugthis": "node --inspect --inspect-brk ./src/index.js",
     "prod_build": "webpack --mode production",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d ./dist",
+    "deploy": "gh-pages -d ./docs",
     "publish-demo": "npm run build && npm run deploy"
   },
   "author": "",

@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = env => ({
     output: {
-        path: path.join(__dirname, "./build-utils/docs"),
+        path: path.join(__dirname, "./docs"),
         filename: "bundle.js",
         publicPath: "/norala.github.io/"
     },

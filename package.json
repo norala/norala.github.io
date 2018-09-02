@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage" : "http://norala.github.io",
+  "homepage" : "http://lanora-design.com",
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "node ./node_modules/webpack/bin/webpack.js",
@@ -13,7 +13,7 @@
     "debugthis": "node --inspect --inspect-brk ./src/index.js",
     "prod_build": "webpack --mode production",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d ./dist",
+    "deploy": "gh-pages -d ./docs",
     "publish-demo": "npm run build && npm run deploy"
   },
   "author": "",

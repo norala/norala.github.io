@@ -5,6 +5,7 @@ module.exports = env => ({
     output: {
         path: path.join(__dirname, "./docs"),
         filename: "bundle.js",
+        publicPath: "/norala.github.io/"
     },
     module: {
         rules: [

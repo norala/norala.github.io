@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage" : "http://lanora-design.com",
+  "homepage" : "http://norala.github.io",
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "node ./node_modules/webpack/bin/webpack.js",

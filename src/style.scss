@@ -81,9 +81,9 @@ html {
                         .nav {
                             margin-top: 3em;
                                 button {
-                                    padding: 1em;
+                                    padding: 1.2em;
                                     text-transform: uppercase;
-                                    font-size: 2em;
+                                    font-size: 2.5em;
                                     background: rgba(255,255,255,0.5);
                                     font-family: 'Lato', sans-serif;
                                     border: solid 1px $color-black;
@@ -91,6 +91,10 @@ html {
                                     letter-spacing: 2px;
                                     cursor: pointer;
                                     outline: none;
+                                    @media (min-width: 768px) {
+                                        padding: 1em;
+                                        font-size: 2em;
+                                    }
                                     &:hover {
                                         //text-decoration: line-through; 
                                         background-color: #fff;
@@ -105,24 +109,36 @@ html {
                                     margin-bottom: 2em;
                                     cursor: pointer;
                                     position: relative;
+                                    width: 80%;
+                                    @media (min-width: 450px) {
+                                        width: 100%;
+                                    }
                                 }
                         }
                         .hide-projects {
                             display: none;
                             .left-content {
-                                width: 100%;
-                                // margin-left: 2em;
-                                // margin-right: 2em;
+                        
+                                margin-left: 2em;
+                                margin-right: 2em;
                                 .breathe-home {
-                                    width: 100%;
+
+                                    
+                                    @media (min-width: 450px) {
+                                        width: 100%;
+                                    }
                                 }
                             }
                             .right-content {
-                                width:100%;
-                                // margin-left: 2em;
-                                // margin-right: 2em;
+                                
+                                margin-left: 2em;
+                                margin-right: 2em;
                                 .breathe-home {
-                                    width: 100%;
+                                   
+                                   
+                                    @media (min-width: 450px) {
+                                        width: 100%;
+                                    }
                                 }
                             }
                         }

@@ -43,7 +43,11 @@ module.exports = ({ mode, presets } = {
             new HtmlWebpackPlugin({
                 filename: 'impressum.html',
                 template: './src/impressum.html',
-              }),
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'about.html',
+                template: './src/about.html',
+            }),
               new MiniCssExtractPlugin({
                 // Options similar to the same options in webpackOptions.output
                 // both options are optional

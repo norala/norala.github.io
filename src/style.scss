@@ -2,10 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana');
 $color-black: #000;
 
-// @-webkit-keyframes lanora {
-//     0%   { opacity: 0; }
-//     100% { opacity: 1; }
-//   }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+    animation-duration:1s;
+    animation-delay: 1.5s
+}
+
+[aos="fade-down"] {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  
+  [aos="fade-down"].aos-animate {
+    opacity: 1;
+  }
 
 html {
     height: 100%; 
@@ -17,6 +33,10 @@ html {
             background-repeat: no-repeat;
             background-size: cover;
             font-family: Lato;
+            -webkit-animation: fadeIn 3s ease-out forwards;; /* Safari 4+ */
+            -moz-animation:    fadeIn 3s ease-out forwards;; /* Fx 5+ */
+            -o-animation:      fadeIn 3s ease-out forwards;; /* Opera 12+ */
+            animation:         fadeIn 3s ease-out forwards;; /* IE 10+, Fx 29+ */
                 a {
                     color: $color-black;
                     text-decoration: none;
@@ -42,26 +62,21 @@ html {
                             @media (min-width: 768px) {
                                 font-size: 1em;
                             }
-                                .title-main {
-                                    font-family: 'Italiana', serif;
+                            .title-main {
+                                font-family: 'Italiana', serif;
+                                font-size: 4.6em;
+                                font-weight: 100;
+                                @media (min-width: 768px) {
                                     font-size: 4.6em;
-                                    font-weight: 100;
-                                    // -webkit-animation: lanora 7s ease-out forwards;; /* Safari 4+ */
-                                    // -moz-animation:    lanora 7s ease-out forwards;; /* Fx 5+ */
-                                    // -o-animation:      lanora 7s ease-out forwards;; /* Opera 12+ */
-                                    // animation:         lanora 7s ease-out forwards;; /* IE 10+, Fx 29+ */
-                                    @media (min-width: 768px) {
-                                        font-size: 4.6em;
-                                    }
                                 }
-                                .subtitle-main {
-                                    margin-top: -2em !important;
-                                    font-size: 1em;
-                                }
-                                
-                                h1, h5 {
-                                    margin: 0;
-                                }
+                            }
+                            .subtitle-main {
+                                margin-top: -2em !important;
+                                font-size: 1em;
+                            } 
+                            h1, h5 {
+                                margin: 0;
+                            }
                         }
                         .main-title {
                             font-size: 0.7em !important;
@@ -95,13 +110,10 @@ html {
                                         padding: 1em;
                                         font-size: 2em;
                                     }
-                                    &:hover {
-                                        //text-decoration: line-through; 
-                                        background-color: #fff;
-                                        background: url(/pictures/linethrough.svg);
-                                        background-size: contain;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
+                                   
+                                        &:hover {
+                                            background: rgba(255,255,255,0.85);
+                                            text-decoration: line-through; 
                                     }
                                 }
                                 .next-button {
@@ -134,8 +146,6 @@ html {
                                 margin-left: 2em;
                                 margin-right: 2em;
                                 .breathe-home {
-                                   
-                                   
                                     @media (min-width: 450px) {
                                         width: 100%;
                                     }
@@ -167,11 +177,38 @@ html {
                             }
                         }
                 }
+                #footer-main {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    margin-right: 1em;
+                    .about {
+                        padding-right: 21px;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: line-through; 
+                        }
+                    }
+                    .contact {
+                        padding-right: 21px;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: line-through; 
+                        }
+                    }
+                }
                 .footer {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-end;
                     margin-right: 1em;
+                    .about {
+                        padding-right: 21px;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: line-through; 
+                        }
+                    }
                     .contact {
                         padding-right: 21px;
                         cursor: pointer;

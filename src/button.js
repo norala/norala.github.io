@@ -14,6 +14,7 @@ function clickButton() {
             document.getElementById("projects-button").classList.add("next-button");
             document.getElementById("container-bgd").style.background = "none";
             document.getElementById("site-name").classList.add("main-title");
+            document.getElementById("footer-main").style.display="none";
         });
 }
 

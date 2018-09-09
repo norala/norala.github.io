@@ -45,10 +45,6 @@ module.exports = ({ mode, presets } = {
                 template: './src/contact.html',
             }),
             new HtmlWebpackPlugin({
-                filename: 'impressum.html',
-                template: './src/impressum.html',
-            }),
-            new HtmlWebpackPlugin({
                 filename: 'about.html',
                 template: './src/about.html',
             }),

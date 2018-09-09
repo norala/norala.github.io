@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Italiana');
+@import "slickfix";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme"; 
 $color-black: #000;
 
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -13,16 +16,7 @@ $color-black: #000;
     animation-duration:1s;
     animation-delay: 1.5s
 }
-
-[aos="fade-down"] {
-    opacity: 0;
-    transition-property: opacity;
-  }
-  
-  [aos="fade-down"].aos-animate {
-    opacity: 1;
-  }
-
+            
 html {
     height: 100%; 
     width: 100%;
@@ -41,13 +35,21 @@ html {
                     color: $color-black;
                     text-decoration: none;
                 }
+                #myVideo {
+                    position: fixed;
+                    left:0;
+                    bottom: 0;
+                    min-width: 100%; 
+                    height: 60%;
+                    z-index: -1;
+                }
                 .container {
                     display: flex;
                     height: 100%;
                     width: 100%;
                     flex-direction: column;
                     justify-content: space-between;
-                    background: url(/pictures/lavender-mobil.svg); 
+                    // background: url(/img/lavender-mobil.svg); 
                     -webkit-background-size: contain;
                     -moz-background-size: contain;
                     -o-background-size: contain;
@@ -130,25 +132,22 @@ html {
                         .hide-projects {
                             display: none;
                             .left-content {
-                        
+                                margin-top: 2em;
                                 margin-left: 2em;
                                 margin-right: 2em;
                                 .breathe-home {
-
-                                    
-                                    @media (min-width: 450px) {
+                                   
                                         width: 100%;
-                                    }
+                                    
                                 }
                             }
                             .right-content {
-                                
                                 margin-left: 2em;
                                 margin-right: 2em;
                                 .breathe-home {
-                                    @media (min-width: 450px) {
+                                  
                                         width: 100%;
-                                    }
+                                    
                                 }
                             }
                         }
@@ -166,12 +165,24 @@ html {
                                 width: 100%;
                                 display: flex;
                                 min-height: 77%;
-                                flex-direction: column;
-                                padding-top: 3em; 
+                                flex-direction: column; 
+                                padding-top: 2em;
+                                #slide {
+                                    margin-right: 2em;
+                                    margin-left: 2em;
+                                }
+                                h2 {
+                                    text-align: center; 
+                                }
+                                .project-title {
+                                    text-align: center;
+                                    text-align: center;
+                                    margin-top: -1em;
+
+                                }
                                 p {
                                     font-size: 0.85em;
                                     font-family: Lato;
-                                    padding-top: 3em;
                                     line-height: 1.8em;
                                 }
                             }

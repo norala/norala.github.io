@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ExtractSass = new ExtractTextPlugin('main.css');
+const fileContent = require('webpack-php-loader');
 
 module.exports = env => ({
     module: {
@@ -20,28 +21,9 @@ module.exports = env => ({
                   }
               ]
           },
-          {
-            test: /\.php$/,
-            loaders: [
-              'html-minify',
-              'php-loader'
-            ]
-          },
-
-        ]
+        ], 
     },
     plugins: [
         ExtractSass
       ]
 });
-
-// test: /\.svg$/,
-//                 use: [
-//                   {
-//                     loader: 'svg-inline-loader',
-//                     options: {
-//                       limit: 8192
-//                     },
-                    
-//                   }
-//                 ]

@@ -16,8 +16,11 @@ module.exports = env => ({
                     "css-loader",
                     "sass-loader"
                 ]
-            }
-
+            },
+            { 
+                test: /\.php$/, query: '', 
+                loaders: [ "html-minify", "php-loader" ] 
+          },
         ]
     },
     plugins: [new MiniCssExtractPlugin(),],

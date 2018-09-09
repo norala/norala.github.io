@@ -32,6 +32,10 @@ module.exports = ({ mode, presets } = {
         //      new webpack.ProgressPlugin()],
 
         plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            }),
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: './src/index.html'

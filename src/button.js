@@ -1,12 +1,3 @@
-// const clickButton = buttonName => {
-//     const buttonLabel = 'projects';
-
-//     const button = document.createElement("button");
-//     button.innerText = buttonLabel;
-
-//     return button;
-// };
-
 function clickButton() {
     document.getElementById("projects-button").addEventListener("click", function(){
             document.getElementById("project-container").classList.add("show-projects");

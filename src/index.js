@@ -5,7 +5,6 @@ import clickButton from "./button.js";
 import 'slick-carousel';
 import 'jquery';
 import slideShow from "./slide.js";
-//mport form from './form.php';
 clickButton();
 
 

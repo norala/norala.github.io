@@ -6,235 +6,265 @@
 $color-black: #000;
 
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
 .fade-in {
-    opacity:0;  /* make things invisible upon start */
-    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-
-    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-
+    opacity:0;  
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards; 
     animation-duration:1s;
     animation-delay: 1.5s
 }
-            
+* {
+    box-sizing: border-box;
+    }           
 html {
     height: 100%; 
     width: 100%;
-        body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: Lato;
-            -webkit-animation: fadeIn 3s ease-out forwards;; /* Safari 4+ */
-            -moz-animation:    fadeIn 3s ease-out forwards;; /* Fx 5+ */
-            -o-animation:      fadeIn 3s ease-out forwards;; /* Opera 12+ */
-            animation:         fadeIn 3s ease-out forwards;; /* IE 10+, Fx 29+ */
-                a {
-                    color: $color-black;
-                    text-decoration: none;
-                }
-                // #myVideo {
-                //     position: fixed;
-                //     right: 0;
-                //     bottom: 0;
-                //     min-width: 100%; 
-                //     height: 60%;
-                //     z-index: -1;
-                // }
-                .container {
-                    display: flex;
-                    height: 100%;
-                    width: 100%;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    background: url(/img/lavender-mobil.svg); 
-                    -webkit-background-size: contain;
-                    -moz-background-size: contain;
-                    -o-background-size: contain;
-                    background-size: contain;
-                    @media (min-width: 1024px) {
-                       
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Lato;
+        -webkit-animation: fadeIn 3s ease-out forwards; /* Safari 4+ */; /* Fx 5+ */; /* Opera 12+ */
+        animation: fadeIn 3s ease-out forwards; /* IE 10+, Fx 29+ */
+            a {
+                color: $color-black;
+                text-decoration: none;
+            }
+            .container {
+                display: flex;
+                display: -ms-flexbox;
+                display: -moz-box;
+                display: -webkit-box;
+                height: 100%;
+                width: 100%;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                background: url(/img/lavender-mobil.svg);
+                background-size: contain;
+                    #site-name {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 0.7em;
+                        @media (min-width: 768px) {
+                            font-size: 1em;
                     }
-                        #site-name {
-                            margin: auto;
-                            text-align: center;
-                            font-size: 0.7em;
-                            @media (min-width: 768px) {
-                                font-size: 1em;
-                            }
-                            .title-main {
-                                font-family: 'Italiana', serif;
+                    .title-main {
+                        font-family:'Italiana', serif;
+                        font-size: 4.6em;
+                        font-weight: 100;
+                        @media (min-width: 768px) {
                                 font-size: 4.6em;
-                                font-weight: 100;
-                                @media (min-width: 768px) {
-                                    font-size: 4.6em;
-                                }
-                            }
-                            .subtitle-main {
-                                margin-top: -2em !important;
-                                font-size: 1em;
-                            } 
-                            h1, h5 {
-                                margin: 0;
-                            }
-                        }
-                        .main-title {
-                            font-size: 0.7em !important;
-                            margin-top: 1em !important;
-                            @media (min-width: 768px) {
-                                padding-bottom: 10em;
-                            }
-                            @media (min-width: 1024px) {
-                                padding-bottom: 17em;
-                            }
-                        }
-                        .main-title-next {
-                            margin-top: 1em;
-                            margin-bottom: 2em;
-                            font-size: 0.7em;
-                        }
-                        .nav {
-                            margin-top: 3em;
-                                button {
-                                    padding: 1.2em;
-                                    text-transform: uppercase;
-                                    font-size: 2.5em;
-                                    background: rgba(255,255,255,0.5);
-                                    font-family: 'Lato', sans-serif;
-                                    border: solid 1px $color-black;
-                                    border-radius: 5px;
-                                    letter-spacing: 2px;
-                                    cursor: pointer;
-                                    outline: none;
-                                    @media (min-width: 768px) {
-                                        padding: 1em;
-                                        font-size: 2em;
-                                    }
-                                   
-                                        &:hover {
-                                            background: rgba(255,255,255,0.85);
-                                            text-decoration: line-through; 
-                                    }
-                                }
-                                .next-button {
-                                    margin-top: 3em;
-                                    margin-bottom: 2em;
-                                    cursor: pointer;
-                                    position: relative;
-                                    width: 80%;
-                                    @media (min-width: 450px) {
-                                        width: 100%;
-                                    }
-                                }
-                        }
-                        .hide-projects {
-                            display: none;
-                            .left-content {
-                                margin-top: 2em;
-                                margin-left: 2em;
-                                margin-right: 2em;
-                                .breathe-home {
-                                   
-                                        width: 100%;
-                                    
-                                }
-                            }
-                            .right-content {
-                                margin-left: 2em;
-                                margin-right: 2em;
-                                .breathe-home {
-                                  
-                                        width: 100%;
-                                    
-                                }
-                            }
-                        }
-                        .show-projects {
-                            width: 100%;
-                            display: flex;
-                            min-height: 77%;
-                            flex-direction: column;
-                            padding-top: 3em;
-                            justify-content: flex-end;
-                            .breathe-main {
-                                width: 100%;
-                            }
-                            .project-content {
-                                width: 100%;
-                                display: flex;
-                                min-height: 77%;
-                                flex-direction: column; 
-                                padding-top: 2em;
-                                #slide {
-                                    margin-right: 2em;
-                                    margin-left: 2em;
-                                }
-                                h2 {
-                                    text-align: center; 
-                                }
-                                .project-title {
-                                    text-align: center;
-                                    text-align: center;
-                                    margin-top: -1em;
-
-                                }
-                                p {
-                                    font-size: 0.85em;
-                                    font-family: Lato;
-                                    line-height: 1.8em;
-                                }
-                            }
-                        }
-                }
-                #footer-main {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    margin-right: 1em;
-                    .about {
-                        padding-right: 21px;
-                        cursor: pointer;
-                        &:hover {
-                            text-decoration: line-through; 
                         }
                     }
-                    .contact {
-                        padding-right: 21px;
-                        cursor: pointer;
-                        &:hover {
-                            text-decoration: line-through; 
-                        }
+                    .subtitle-main {
+                        margin-top: -2em !important;
+                        font-size: 1em;
+                    } 
+                    h1, h5 {
+                        margin: 0;
                     }
                 }
-                .footer {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    margin-right: 1em;
+                .main-title {
+                    font-size: 0.7em !important;
+                    margin-top: 1em !important;
+                    height: auto !important;
+                }
+                .main-title-next {
+                    margin-top: 1em;
+                    margin-bottom: 2em;
+                    font-size: 0.7em;
+                }
+                .nav {
                     margin-top: 3em;
-                    .about {
-                        padding-right: 21px;
+                    button {
+                        padding: 1.2em;
+                        text-transform: uppercase;
+                        font-size: 2.5em;
+                        background: rgba(255,255,255,0.5);
+                        font-family: 'Lato', sans-serif;
+                        border: solid 1px $color-black;
+                        border-radius: 5px;
+                        letter-spacing: 2px;
                         cursor: pointer;
+                        outline: none;
+                        @media (min-width: 768px) {
+                            padding: 1em;
+                            font-size: 2em;
+                        }          
                         &:hover {
+                            background: rgba(255,255,255,0.85);
                             text-decoration: line-through; 
                         }
                     }
-                    .contact {
-                        padding-right: 21px;
+                    .next-button {
+                        margin-top: 3em;
+                        margin-bottom: 2em;
                         cursor: pointer;
-                        &:hover {
-                            text-decoration: line-through; 
-                        }
-                    }
-                    .impressum {
-                        cursor: pointer;
-                        &:hover {
-                            text-decoration: line-through; 
+                        position: relative;
+                        width: 80%;
+                        @media (min-width: 450px) {
+                            width: 100%;
                         }
                     }
                 }
+                #project-container {
+                    width: 100%;
+                    margin: 0 auto;
+                    @media (min-width: 795px) {
+                        width: 80%;
+                    }
+                }
+                .hide-projects {
+                    display: none;
+                    .breathe-home {
+                        width: 100%;
+                    }
+                    .main-image {
+                        width: 100%;
+                        margin: 0 auto;
+                        margin-top: -2em;
+                        @media (min-width: 450px) {
+                            width: 80%;
+                        }
+                    }
+                    .main-image-spices {
+                        width: 85%;
+                        margin: 0 auto;
+                        padding-bottom: 2em;
+                        @media (min-width: 450px) {
+                            width: 80%;
+                        }
+                    }
+                }
+                .show-projects {
+                    width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    min-height: 77%;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: end;
+                    -ms-flex-pack: end;
+                    justify-content: flex-end;
+                    .breathe-main {
+                        width: 100%;
+                    }
+                    .project-content {
+                        width: 100%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        min-height: 77%;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column; 
+                        padding-top: 2em;
+                        #slide {
+                            margin-right: 2em;
+                            margin-left: 2em;
+                        }
+                        h2 {
+                            text-align: center;
+                            font-size: 1.2em;
+                            @media (min-width: 795px) {
+                                font-size: 1.5em;
+                            } 
+                        }
+                        .project-title {
+                            text-align: center;
+                            text-align: center;
+                            margin-top: -1em;
+                        }
+                        p {
+                            font-size: 0.7em;
+                            font-family: Lato;
+                            line-height: 1.8em;
+                            @media (min-width: 768px) {
+                                font-size: 0.85em;
+                            } 
+                        }
+                    }
+                }
+            }
+            #footer-main {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                margin-right: 1em;
+                .about {
+                    padding-right: 21px;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: line-through; 
+                    }
+                }
+                .contact {
+                        padding-right: 21px;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: line-through; 
+                            }
+                        }
+                    }
+                    .footer {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: row;
+                        flex-direction: row;
+                        -webkit-box-pack: end;
+                        -ms-flex-pack: end;
+                        justify-content: flex-end;
+                        margin-right: 1em;
+                        margin-top: 3em;
+                        width: 100%; 
+                        @media (min-width: 768px) {
+                            width: 112%;
+                        }    
+                        .about {
+                            padding-right: 21px;
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: line-through; 
+                            }
+                        }
+                        .contact {
+                            padding-right: 21px;
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: line-through; 
+                            }
+                        }
+                        .impressum {
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: line-through; 
+                        }
+                    }
+                }
+            }
         }
-}
-
+    

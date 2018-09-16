@@ -48,7 +48,7 @@ html {
                 justify-content: space-between;
                 background: url(/img/lavender-mobil.svg);
                 background-size: contain;
-                    #site-name {
+                    .general {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -76,8 +76,29 @@ html {
                 }
                 .main-title {
                     font-size: 0.7em !important;
-                    margin-top: 1em !important;
-                    height: auto !important;
+                    z-index: 999;
+                    width: 100%;
+                    font-size: 0.7em;
+                    position: fixed;
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    background: #fff;
+                    padding-top: 1em;
+                    .title-main {
+                        font-family:'Italiana', serif;
+                        font-size: 4.6em;
+                        font-weight: 100;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        @media (min-width: 768px) {
+                                font-size: 4.6em;
+                        }
+                    }
+                    .subtitle-main {
+                        margin-top: -2em !important;
+                        font-size: 1em;
+                    } 
                 }
                 .main-title-next {
                     margin-top: 1em;

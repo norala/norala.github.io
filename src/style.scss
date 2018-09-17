@@ -183,7 +183,7 @@ html {
                     .breathe-main {
                         width: 100%;
                     }
-                    .project-content {
+                    .project-content, .project-content-spices {
                         width: 100%;
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -193,7 +193,7 @@ html {
                         -webkit-box-direction: normal;
                         -ms-flex-direction: column;
                         flex-direction: column; 
-                        padding-top: 2em;
+                        padding-top: 9em;
                         #slide {
                             margin-right: 2em;
                             margin-left: 2em;
@@ -218,6 +218,9 @@ html {
                                 font-size: 0.85em;
                             } 
                         }
+                    }
+                    .project-content-spices {
+                        padding-top: 2em;
                     }
                 }
             }
